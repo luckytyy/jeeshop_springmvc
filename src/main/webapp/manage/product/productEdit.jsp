@@ -266,7 +266,7 @@ background-color: #d1d1d1;display: none;height: 30px;z-index: 9999;font-size: 18
 					</tr>
 				</table>
 			</div>
-			
+
 			<!-- 商品属性 -->
 			<div id="tabs-4">
 				<table class="table table-bordered">
@@ -277,7 +277,7 @@ background-color: #d1d1d1;display: none;height: 30px;z-index: 9999;font-size: 18
 					   	 <select id="attrSelectIds" name="attrSelectIds">
 					   	 	<option value="">--请选择--</option>
 							<c:forEach items="${item.attrList}" var="attr">
-								<option value="${attr.id}" <c:if test='${attr.id == e.attrSelectIds}'>selected='selected'</c:if> >
+								<option value="${attr.id}" <c:if test='${attr.id == item.selectedID}'>selected='selected'</c:if> >
 								${attr.name}</option>
 							</c:forEach>		
 						 </select>		
@@ -292,9 +292,9 @@ background-color: #d1d1d1;display: none;height: 30px;z-index: 9999;font-size: 18
 				<table class="table">
 					 <c:forEach items="${e.parameterList}" var="item">  
 					  <tr>
-					    <th style="display: none;"><input type="hidden" name="item.id" value="${item.id}"/></th>
+					    <th style="display: none;"><input type="hidden" name="myParameterIds" value="${item.id}"/></th>
 						<th style="text-align: right;"><c:out value="${item.name}"/></th>
-						<th><input type="text" name="parameterValue" /></th>
+						<th><input type="text" name="myParameterValues" value="${item.parameterValue}"/></th>
 					  </tr>
 					 </c:forEach>
 				</table>
