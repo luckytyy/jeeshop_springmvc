@@ -368,7 +368,7 @@ function defaultProductImg(){
 								</div>
 								<c:if test="${ e.specJsonString!=null }">
 									<!-- 商品规格 -->
-									<input type="hidden" name="specJsonString" id="specJsonString" value="${e.specJsonString}"/>
+									<input type="hidden" name="specJsonString" id="specJsonString" value='${e.specJsonString}'/>
 									<div style="border:0px solid red;" class="spec" id="specDiv">
 										<dl>
 											<dt style="float: left;">尺寸：</dt>
